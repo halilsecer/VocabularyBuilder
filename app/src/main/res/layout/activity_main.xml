@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/acık_kumrengi"
+
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView_main_tittle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="cursive"
+        android:text="VOCABULARY WİZARD"
+
+        android:textColor="@color/black"
+        android:textSize="30dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.064" />
+
+    <Button
+        android:id="@+id/btn_quiz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/teal_200"
+        android:text="QUIZZES"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_main_tittle"
+        app:layout_constraintVertical_bias="0.594" />
+
+    <Button
+        android:id="@+id/btn_verb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/teal_200"
+        android:text="VERBS"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/btn_adj"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_main_tittle" />
+
+    <Button
+        android:id="@+id/btn_adv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/teal_200"
+        android:text="ADVERBS"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/btn_phrs"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_adj" />
+
+    <Button
+        android:id="@+id/btn_adj"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/teal_200"
+        android:text="ADJECTİVES"
+        android:textColor="@color/black"
+
+        app:layout_constraintBottom_toTopOf="@+id/btn_adv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_verb" />
+
+    <Button
+        android:id="@+id/btn_phrs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/teal_200"
+        android:text="PHRASES"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/btn_quiz"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_adv" />
+
+    <ImageButton
+        android:id="@+id/btn_image_cambridge"
+        android:layout_width="82dp"
+        android:layout_height="73dp"
+        android:filterTouchesWhenObscured="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/cambridge"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_image_oxford"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_quiz"
+        app:layout_constraintVertical_bias="0.684" />
+
+    <ImageButton
+        android:id="@+id/btn_image_oxford"
+        android:layout_width="82dp"
+        android:layout_height="70dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/oxford"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_image_cambridge"
+        app:layout_constraintTop_toBottomOf="@+id/btn_phrs"
+        app:layout_constraintVertical_bias="0.777" />
+
+    <Button
+        android:id="@+id/btn_user_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User List"
+        android:backgroundTint="@color/teal_200"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/btn_image_oxford"
+        app:layout_constraintEnd_toStartOf="@+id/btn_image_oxford"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_image_cambridge"
+        app:layout_constraintTop_toBottomOf="@+id/btn_quiz" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

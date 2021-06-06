@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/kumrengi"
+    tools:context=".UserList">
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="YOUR WORDS"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/listview_userlist"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <EditText
+        android:id="@+id/et_add_word"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Word"
+        android:inputType="textPersonName"
+        android:text=" "
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/et_add_definiton"
+        app:layout_constraintEnd_toEndOf="@+id/et_add_definiton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/et_add_definiton"
+        app:layout_constraintTop_toBottomOf="@+id/btn_showadd" />
+
+    <EditText
+        android:id="@+id/et_add_definiton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Definiton"
+        android:inputType="textPersonName"
+        android:text=" "
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/et_add_sentence"
+        app:layout_constraintEnd_toEndOf="@+id/et_add_sentence"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/et_add_sentence"
+        app:layout_constraintTop_toBottomOf="@+id/et_add_word" />
+
+    <Button
+        android:id="@+id/btn_showadd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="add new word"
+        app:layout_constraintBottom_toTopOf="@+id/et_add_word"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listview_userlist" />
+
+    <Button
+        android:id="@+id/btn_add_database"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/et_add_definiton"
+        app:layout_constraintTop_toBottomOf="@+id/btn_showadd" />
+
+    <EditText
+        android:id="@+id/et_add_sentence"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:ellipsize="end"
+        android:ems="10"
+        android:hint="Sentence"
+        android:inputType="textPersonName"
+        android:text=" "
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_add_definiton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
